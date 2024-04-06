@@ -4,15 +4,26 @@
     margin: auto;
   }
   
+  /* #summary{
+    width : 800px; 
+  } */
   figure.image {
     display: flex;
     justify-content: center;
     background-color: black;
+   
   }
   
   figure .image img {
     width: 128px;
   }
+
+  .media-content {
+    padding-left: 12px;
+    
+  }
+
+  
   
   .notification {
     margin-top: 20px !important;
