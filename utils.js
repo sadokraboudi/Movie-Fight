@@ -16,3 +16,8 @@
             },delay); 
         }
     }
+    // closure : 
+    // every call of the returned function has access to the 
+    // same scope version of the debouce function of the timeoutId so 
+    // if any call changed the variable it will be 
+    // changed in every other call ; 

@@ -4,7 +4,10 @@ const createAutoComplete = ({root,
                              onOptionSelect,
                              inputValue,
                              fetchData,
-                             fetchDetailData}) => {
+                             fetchDetailData,
+                             movieArticle,
+                             side , 
+                            comparisonObj}) => {
 root.innerHTML =`
 <label><b>Search For a item<b>
     <input class="input" id="search_bar" autocomplete="off"/>
@@ -29,6 +32,7 @@ const onInput =  debouce(async event => {
      }
     resultsWrapper.innerHTML='';
     dropdown.classList.add('is-active'); 
+    console.log(items);
     for(let item of items){
      const anchor = document.createElement('a');  
      anchor.classList.add('dropdown-item'); 
@@ -36,7 +40,7 @@ const onInput =  debouce(async event => {
      anchor.addEventListener('click',() =>{
          dropdown.classList.remove('is-active');
          input.value = inputValue(item);
-         onOptionSelect(item,fetchDetailData);
+         onOptionSelect(item,fetchDetailData,movieArticle,side,comparisonObj);
      });
      resultsWrapper.appendChild(anchor); 
 

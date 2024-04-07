@@ -2,31 +2,38 @@
     width: 600px;
     text-align: center;
     margin: auto;
+    padding: 100px 0;
   }
   
   /* #summary{
     width : 800px; 
   } */
+  article.media {
+    flex-wrap: nowrap;
+    height: 200px;
+    overflow-y:hidden;
+  }
   figure.image {
     display: flex;
     justify-content: center;
     background-color: black;
+    object-fit : cover; 
+    
    
   }
   
   figure .image img {
     width: 128px;
+    object-fit: cover;
   }
 
-  .media-content {
-    padding-left: 12px;
-    
-  }
-
-  
-  
+ 
   .notification {
     margin-top: 20px !important;
+  }
+  .title.award {
+    height: 72px; 
+
   }
   
   .results {
